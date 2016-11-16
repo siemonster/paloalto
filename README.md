@@ -64,7 +64,7 @@ file {
 ```
 The logstash filter 25-paloalto-filter.conf can be downloaded from this repository.
 
-Logstash outputs can be configured as follows, the template is available [here](https://github.com/clay584/ELK_Stack_For_Network_Operations_RELOADED/blob/master/elasticsearch-template.json)
+Logstash outputs can be configured as follows, the template is available [here](https://raw.githubusercontent.com/siemonster/paloalto/master/pan-template.json)
 
 ```
 output {
