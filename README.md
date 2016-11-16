@@ -67,7 +67,7 @@ file {
         }
 }
 ```
-The logstash filter 25-paloalto-filter.conf can be downloaded from this repository.
+The logstash filter 25-paloalto-filter.conf can be downloaded from this repository and copied to /etc/logstash/conf.d/ on Proteus.
 
 Logstash outputs can be configured as follows.
 
