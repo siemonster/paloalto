@@ -46,6 +46,11 @@ filter f_threat { facility(local1); };
 log { source(s_netsyslog); filter(f_traffic); destination(d_netsyslog); };
 log { source(s_netsyslog); filter(f_threat); destination(d_urlsyslog); };
 ```
+Prepare the Elasticsearch mapping:
+```
+curl -XPUT localhost:9200/_template/pan-traffic -d@pan-traffic-mappings.json
+curl -XPUT localhost:9200/_template/pan-url -d@pan-url-mappings.json
+```
 Logstash inputs can be configured as follows:
 
 ```
@@ -64,7 +69,7 @@ file {
 ```
 The logstash filter 25-paloalto-filter.conf can be downloaded from this repository.
 
-Logstash outputs can be configured as follows, the template is available [here](https://raw.githubusercontent.com/siemonster/paloalto/master/pan-template.json)
+Logstash outputs can be configured as follows.
 
 ```
 output {
@@ -72,21 +77,18 @@ if [type] == "traffic" {
      elasticsearch {
          hosts => ["localhost:9200"]
          index => "pan-traffic-%{+YYYY.MM.dd}"
-         template => "/etc/logstash/elasticsearch-template.json"
-         template_overwrite => true
           }
     }
 else if [type] == "url" {
-   if "_grokparsefailure" not in [tags] {
     elasticsearch {
          hosts => ["localhost:9200"]
          index => "pan-url-%{+YYYY.MM.dd}"
-         template => "/etc/logstash/elasticsearch-template.json"
-         template_overwrite => true
+
           }
        }
-    }
+
 ```
+
 Register each index in Kibana, pan-traffic-* & pan-url-*
 
 ![pa-index](https://cloud.githubusercontent.com/assets/16313160/17763077/877b29dc-6559-11e6-8578-f2701cb63511.png)
