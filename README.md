@@ -37,7 +37,7 @@ source s_netsyslog {
        udp(ip(0.0.0.0) port(1514));
 };
 
-destination d_netsyslog { file("/var/log/network.log" owner("logstash") group("root") perm(0644)); };
+destination d_netsyslog { file("/var/log/traffic.log" owner("logstash") group("root") perm(0644)); };
 destination d_urlsyslog { file("/var/log/urllogs.log" owner("logstash") group("root") perm(0644)); };
 
 filter f_traffic { facility(local0); };
@@ -56,7 +56,7 @@ Logstash inputs can be configured as follows:
 ```
 input {
 file {
-        path => ["/var/log/network.log"]
+        path => ["/var/log/traffic.log"]
         type => "traffic"
         tags => ["paloalto"]
         }
