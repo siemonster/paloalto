@@ -1,0 +1,241 @@
+{
+    "template" : "pan-traffic*",
+    "mappings" : {
+      "traffic" : {
+        "properties" : {
+          "@timestamp" : {
+            "type" : "date",
+            "format" : "strict_date_optional_time||epoch_millis"
+          },
+          "@version" : {
+            "type" : "string"
+          },
+          "Action" : {
+            "type" : "string"
+          },
+          "Application" : {
+            "type" : "string"
+          },
+          "Bytes" : {
+            "type" : "long"
+          },
+          "BytesReceived" : {
+            "type" : "long"
+          },
+          "BytesSent" : {
+            "type" : "long"
+          },
+          "Category" : {
+            "type" : "string"
+          },
+          "ConfigVersion" : {
+            "type" : "string"
+          },
+          "DestinationAddress" : {
+            "type" : "string"
+          },
+          "DestinationCountry" : {
+            "type" : "string"
+          },
+          "DestinationPort" : {
+            "type" : "string"
+          },
+          "DestinationZone" : {
+            "type" : "string"
+          },
+          "ElapsedTimeInSec" : {
+            "type" : "long"
+          },
+          "Flags" : {
+            "type" : "string"
+          },
+          "GenerateTime" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "IPProtocol" : {
+            "type" : "string"
+          },
+          "InboundInterface" : {
+            "type" : "string"
+          },
+          "LogAction" : {
+            "type" : "string"
+          },
+          "NATDestinationIP" : {
+            "type" : "string"
+          },
+          "NATDestinationPort" : {
+            "type" : "long"
+          },
+          "NATSourceIP" : {
+            "type" : "string"
+          },
+          "NATSourcePort" : {
+            "type" : "long"
+          },
+          "OutboundInterface" : {
+            "type" : "string"
+          },
+          "Packets" : {
+            "type" : "long"
+          },
+          "Padding" : {
+            "type" : "string"
+          },
+          "PaloAltoDomain" : {
+            "type" : "string"
+          },
+          "ReceiveTime" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "RepeatCount" : {
+            "type" : "string"
+          },
+          "Rule" : {
+            "type" : "string"
+          },
+          "SerialNum" : {
+            "type" : "string"
+          },
+          "SessionID" : {
+            "type" : "string"
+          },
+          "SourceAddress" : {
+            "type" : "string"
+          },
+          "SourceCountry" : {
+            "type" : "string"
+          },
+          "SourcePort" : {
+            "type" : "string"
+          },
+          "SourceZone" : {
+            "type" : "string"
+          },
+          "StartTime" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "Threat-ContentType" : {
+            "type" : "string"
+          },
+          "TimeLogged" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "Type" : {
+            "type" : "string"
+          },
+          "VirtualSystem" : {
+            "type" : "string"
+          },
+          "actionflags" : {
+            "type" : "string"
+          },
+          "column47" : {
+            "type" : "string"
+          },
+          "column48" : {
+            "type" : "string"
+          },
+          "column49" : {
+            "type" : "string"
+          },
+          "column50" : {
+            "type" : "string"
+          },
+          "column51" : {
+            "type" : "string"
+          },
+          "column53" : {
+            "type" : "string"
+          },
+          "column54" : {
+            "type" : "string"
+          },
+          "cpadding" : {
+            "type" : "string"
+          },
+          "fingerprint" : {
+            "type" : "string"
+          },
+          "geoip" : {
+            "properties" : {
+              "area_code" : {
+                "type" : "long"
+              },
+              "city_name" : {
+                "type" : "string"
+              },
+              "continent_code" : {
+                "type" : "string"
+              },
+              "country_code2" : {
+                "type" : "string"
+              },
+              "country_code3" : {
+                "type" : "string"
+              },
+              "country_name" : {
+                "type" : "string"
+              },
+              "dma_code" : {
+                "type" : "long"
+              },
+              "ip" : {
+                "type" : "string"
+              },
+              "latitude" : {
+                "type" : "double"
+              },
+              "location" : {
+                "type" : "geo_point"
+              },
+              "longitude" : {
+                "type" : "double"
+              },
+              "postal_code" : {
+                "type" : "string"
+              },
+              "real_region_name" : {
+                "type" : "string"
+              },
+              "region_name" : {
+                "type" : "string"
+              },
+              "timezone" : {
+                "type" : "string"
+              }
+            }
+          },
+          "host" : {
+            "type" : "string"
+          },
+          "path" : {
+            "type" : "string"
+          },
+          "pkts_received" : {
+            "type" : "long"
+          },
+          "pkts_sent" : {
+            "type" : "long"
+          },
+          "seqno" : {
+            "type" : "long"
+          },
+          "syslog_host" : {
+            "type" : "string"
+          },
+          "tags" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+
